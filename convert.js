@@ -83,7 +83,7 @@ function processImageData(e) {
 	let img_data = cv.img_data;
 
 	if (!img_data) {
-		alert("aa");
+		alert("画像が選択されていません。");
 	}
 
 	let processed_data = cv.getContext('2d').createImageData(img_data.width, img_data.height);
