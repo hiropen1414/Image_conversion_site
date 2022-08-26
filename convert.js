@@ -85,7 +85,7 @@ function processImageData(e) {
 	if (!img_data) {
 		alert("画像が選択されていません。");
 	}
-
+	
 	let processed_data = cv.getContext('2d').createImageData(img_data.width, img_data.height);
 	// let del_ = cv.getContext('2d');
 	// del_.clearRect(0,0,cv.width,cv.height);
@@ -133,10 +133,10 @@ function processImageData(e) {
 		}
 	}
 	putimage(cv, ct, processed_data, img_data);
+	
 }
 
 function putimage(cv, ct, processed_data, img_data) {
-
 	ct.putImageData(processed_data, 0, 0);
 }
 // function convert(){

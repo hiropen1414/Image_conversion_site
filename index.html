@@ -33,25 +33,53 @@
 	</p>
 
 	<h3 id="title">File名:</h3>
-	<p>
-		<canvas id="test_canvas" width="500" height="305" style="border: 1px solid;"
-			onclick="processImageData()"></canvas>
-	</p>
-	<p>
-		<input type="button" id="but_inv" onclick="color_inversion()" value="色調反転"><br><br>
-		<input type="button" id="but_mon" onclick="monochrome()" value="モノクロ加工"><br><br>
-		<label for="透過度">不透明度:</label>
-		<input type="range" id="range" min="0" max="255" onchange="processImageData()" value="255" name="透過度"><span
-			id="opacity"></span>
-	</p>
-	<p>
-		<input type="button" onclick="horizontal_inversion()" value="左右反転">
-		<input type="button" onclick="vartical_inversion()" value="上下反転">
-	</p>
-	<p>
-		<input type="button" onclick="reset()" value="リセットする">
-		<input type="button" id="download" onclick="Download()" value="画像をダウンロードする">
-	</p>
+	<div class="operation">
+		<div class="image_show">
+			<canvas id="test_canvas" width="500" height="305" style="border: 1px solid;"
+				onclick="processImageData()"></canvas>
+		</div>
+		<div class="option">
+			<div class="op_color">
+				<p class="op">🎨Color</p>
+				<table>
+					<tr>
+						<td>
+							<input type="button" id="but_inv" onclick="color_inversion()" value="色調反転">
+						</td>
+						<td>
+							<input type="button" id="but_mon" onclick="monochrome()" value="モノクロ加工">
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<label for="透過度" class="trans">不透明度:</label>
+						</th>
+						<td>
+							<input type="range" id="range" min="0" max="255" onchange="processImageData()" value="255"
+								name="透過度"><span id="opacity"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="op_position">
+				<p class="op">🔄Position</p>
+				<table>
+					<tr>
+						<td>
+							<input type="button" onclick="horizontal_inversion()" value="左右反転">
+						</td>
+						<td>
+							<input type="button" onclick="vartical_inversion()" value="上下反転">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="else">
+				<input type="button" onclick="reset()" value="リセットする">
+				<input type="button" id="download" onclick="Download()" value="画像をダウンロードする">
+			</div>
+		</div>
+	</div>
 	<script src="./convert.js"></script>
 </body>
 

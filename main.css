@@ -1,8 +1,75 @@
 .dis_title {
 	font-weight: bold;
-	font-size:5vmin;
+	font-size: 5vmin;
 }
-.content{
-	font-weight:bold;
-	font-size:3.5vmin;
+
+.content {
+	font-weight: bold;
+	font-size: 3.5vmin;
+}
+
+.operation {
+	display: flex;
+}
+
+canvas {
+	width: 80%;
+	height: auto;
+	max-width: 800px;
+	max-height: 800px;
+	margin-right: 5vw;
+	margin-bottom: 5vh;
+}
+
+.image_show {
+	width: 60%;
+
+}
+
+.option {
+	width: 50%;
+}
+
+.op {
+	font-size: 2vw;
+	display: inline-block;
+	margin-top: -3vh;
+	margin-left: -1vw;
+	border: solid 2px rgb(255, 190, 121);
+	border-radius: 10px;
+	background-image: linear-gradient(to right, rgb(249, 217, 156), rgb(255, 230, 210));
+}
+
+.op_color,
+.op_position {
+	border: dotted 3px rgba(255, 195, 106, 0.941);
+	margin-bottom: 3vh;
+}
+
+table {
+	border-spacing: 2vw;
+	margin:auto;
+}
+
+td {
+	width: 5vw;
+}
+
+th{
+	float:right;
+}
+.else {
+	float: right;
+}
+
+input{
+	width:15vw;
+	height:2vw;
+	text-align: center;
+	background-color: rgb(245, 188, 139);
+	border-radius: 10px;
+}
+
+.trans{
+	display: flex;
 }
