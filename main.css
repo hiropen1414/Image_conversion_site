@@ -10,6 +10,7 @@
 
 .operation {
 	display: flex;
+
 }
 
 canvas {
@@ -21,16 +22,29 @@ canvas {
 	margin-bottom: 5vh;
 }
 
+div:has(.op){
+	height:180px;
+}
+
 .image_show {
 	width: 60%;
 
 }
 
+.input_{
+	width:30%;
+	height: 100%;
+	border-radius: 100px;
+	border: orange solid 2px;
+}
 .option {
 	width: 50%;
+	position:relative;
+	bottom:50%;
 }
 
 .op {
+	height: 20%;
 	font-size: 2vw;
 	display: inline-block;
 	margin-top: -3vh;
@@ -41,12 +55,16 @@ canvas {
 }
 
 .op_color,
-.op_position {
+.op_position,
+.op_other {
 	border: dotted 3px rgba(255, 195, 106, 0.941);
 	margin-bottom: 3vh;
+	/* display: flex; */
 }
 
 table {
+	position: relative;
+	bottom:10%;
 	border-spacing: 2vw;
 	margin:auto;
 }
@@ -72,4 +90,24 @@ input{
 
 .trans{
 	display: flex;
+
+}
+
+.check_{
+	position: relative;
+	right:5%;
+	font-size: 12px;
+	white-space: nowrap;
+}
+.check_td{
+	width:0px;
+}
+
+.check{
+	width:20%;
+	position: relative;
+	right:20%;
+	bottom:3px;
+	text-align: left;
+	float:left;
 }

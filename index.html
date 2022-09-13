@@ -29,7 +29,7 @@
 	<script></script>
 
 	<p>
-		<input type="file" onchange="onFileSelected(this)">
+		<input type="file" onchange="onFileSelected(this)" class="input_">
 	</p>
 
 	<h3 id="title">File名:</h3>
@@ -66,6 +66,14 @@
 				<table>
 					<tr>
 						<td>
+							<input type="button" onclick="rotate_left()" value="左90度回転">
+						</td>
+						<td>
+							<input type="button" onclick="rotate_right()" value="右90度回転">
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<input type="button" onclick="horizontal_inversion()" value="左右反転">
 						</td>
 						<td>
@@ -74,9 +82,39 @@
 					</tr>
 				</table>
 			</div>
+			<div class="op_other">
+				<p class="op">📚Other</p>
+				<table>
+					<tr>
+						<th>
+							<label for="check" class="check_">ダウンロード時、名前を変更しない:</label>
+						</th>
+						<td>
+							<label>
+								<input type="checkbox" name="check" value="" class="check">
+							</label>
+							<label>
+								拡張子:<select id="select">
+									<option value="jpeg">jpeg</option>
+									<option value="png">png</option>
+									<option value="heic">heic</option>
+									<option value="tiff">tiff</option>
+									<option value="bmp">bmp</option>
+								</select>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" onclick="reset()" value="リセットする">
+						</td>
+						<td>
+							<input type="button" id="download" onclick="Download()" value="画像をダウンロードする">
+						</td>
+					</tr>
+				</table>
+			</div>
 			<div class="else">
-				<input type="button" onclick="reset()" value="リセットする">
-				<input type="button" id="download" onclick="Download()" value="画像をダウンロードする">
 			</div>
 		</div>
 	</div>
